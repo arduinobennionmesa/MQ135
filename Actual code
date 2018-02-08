@@ -1,0 +1,14 @@
+#include <SoftwareSerial.h>
+#define DEBUG true
+SoftwareSerial esp8266(9,10);
+#include <LiquidCrystal.h> 
+LiquidCrystal lcd(12,11, 5, 4, 3, 2);
+const int sensorPin= 0;
+int air_quality;
+pinMode(8, OUTPUT);
+lcd.begin(16,2);
+lcd.setCursor (0,0);
+lcd.print ("circuitdigest ");
+lcd.setCursor (0,1);
+lcd.print ("Sensor Warming ");
+delay(1000);
